@@ -1,0 +1,213 @@
+/* ================================
+   Color System
+================================ */
+
+:root{
+  --dark-bg:#1c2119;
+  --primary:#414A37;
+  --accent:#99744A;
+  --light:#DBC2A6;
+  --indigo:#6366F1;
+
+  --text-main:#DBC2A6;
+  --text-soft:#b8b2a4;
+
+  --card-bg:#2a2f25;
+  --border:#3a4034;
+
+  --shadow:0 10px 30px rgba(0,0,0,0.4);
+
+  --radius:12px;
+  --transition:0.3s ease;
+}
+
+
+/* ================================
+   Base Reset
+================================ */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+/* ================================
+   Body
+================================ */
+
+body{
+  font-family:
+  system-ui,
+  -apple-system,
+  Segoe UI,
+  Roboto,
+  sans-serif;
+
+  background:var(--dark-bg);
+  color:var(--text-main);
+
+  line-height:1.6;
+}
+
+
+/* ================================
+   Layout Root
+================================ */
+
+#root{
+  width:100%;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+
+/* ================================
+   Typography
+================================ */
+
+h1{
+  font-size:64px;
+  font-weight:700;
+  line-height:1.2;
+  color:var(--light);
+}
+
+h2{
+  font-size:40px;
+  font-weight:600;
+  color:var(--light);
+}
+
+h3{
+  font-size:22px;
+  font-weight:600;
+  color:var(--light);
+}
+
+p{
+  color:var(--text-soft);
+  font-size:16px;
+}
+
+
+/* ================================
+   Links
+================================ */
+
+a{
+  text-decoration:none;
+  color:inherit;
+  transition:var(--transition);
+}
+
+a:hover{
+  color:var(--accent);
+}
+
+
+/* ================================
+   Buttons
+================================ */
+
+button{
+  font-family:inherit;
+  border:none;
+  cursor:pointer;
+}
+
+.btn{
+  background:var(--accent);
+  color:white;
+
+  padding:14px 28px;
+  border-radius:30px;
+
+  font-size:15px;
+  font-weight:500;
+
+  transition:var(--transition);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+
+
+/* ================================
+   Sections
+================================ */
+
+section{
+  padding:44px 8%;
+}
+
+
+/* ================================
+   Cards
+================================ */
+
+.card{
+  background:var(--card-bg);
+  padding:30px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+
+/* ================================
+   Containers
+================================ */
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+
+/* ================================
+   Responsive
+================================ */
+
+@media(max-width:900px){
+
+  h1{
+    font-size:42px;
+  }
+
+  h2{
+    font-size:32px;
+  }
+
+  section{
+    padding:80px 6%;
+  }
+
+}
+.hero-tagline{
+margin-top:12px;
+font-size:18px;
+font-weight:600;
+letter-spacing:0.6px;
+
+background:linear-gradient(90deg,#99744A,#DBC2A6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:glowText 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowText{
+from{
+filter:drop-shadow(0 0 3px rgba(219,194,166,0.4));
+}
+to{
+filter:drop-shadow(0 0 12px rgba(219,194,166,0.9));
+}
+}
