@@ -29,7 +29,7 @@ Always learning. Always improving.
 </motion.p>
 
 <div className="hero-buttons">
-<a href="#projects" className="btn-primary">View Projects</a>
+{/* <a href="#projects" className="btn-primary">View Projects</a> */}
 
 <a 
 href="https://drive.google.com/file/d/1E5GPxwsqApPQ3wOWXdAWvwYNGvigz4iz/view?usp=sharing"
